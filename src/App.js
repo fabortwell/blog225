@@ -9,8 +9,8 @@ function App() {
      <>
      <TopBar/>
      <Settings />
-     {/* <Write /> */}
-     {/* <Home />
+     {/* <Write /> 
+      <Home />
      <Single /> */}
      </>
   );
