@@ -10,12 +10,13 @@ export default function TopBar() {
     <i className="topIcon fa-brands fa-instagram-square"></i>
     </div>
     <div className="topCenter">
-        <ul className="toplist">
+        <ul className="topList">
          <li className="topListItem">HOME</li>
          <li className="topListItem">ABOUT</li>
          <li className="topListItem">CONTACT</li>
-         <li className="topListItem">POST</li>
-         <li className="topListItem">LOGOUT</li>
+         <li className="topListItem">WRITE</li>
+         <li className="topListItem">SIGNIN</li>
+         <li className="topListItem">REGISTER</li>
          </ul>      
     </div>
     <div className="topRight">
