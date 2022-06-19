@@ -21,6 +21,19 @@ const SinglePost = () => {
            </span> 
            <span className="singlePostDate"> 1 hour ago</span>
        </div>
+       <p>Lorem ipsum dolor sit amet consectetur 
+           adipisicing elit. Numquam doloremque vel nesciunt aperiam culpa minima. Porro nostrum ab quod dolore perferendis, nihil officiis accusantium iure, 
+           a recusandae vero culpa sit.
+           orem ipsum dolor sit amet consectetur 
+           adipisicing elit. Numquam doloremque vel nesciunt aperiam culpa minima. Porro nostrum ab quod dolore perferendis, nihil officiis accusantium iure, 
+           a recusandae vero culpa sit.
+           orem ipsum dolor sit amet consectetur 
+           adipisicing elit. Numquam doloremque vel nesciunt aperiam culpa minima. Porro nostrum ab quod dolore perferendis, nihil officiis accusantium iure, 
+           a recusandae vero culpa sit.
+           orem ipsum dolor sit amet consectetur 
+           adipisicing elit. Numquam doloremque vel nesciunt aperiam culpa minima. Porro nostrum ab quod dolore perferendis, nihil officiis accusantium iure, 
+           a recusandae vero culpa sit.
+           </p>
        </div>
     </div>
   )
