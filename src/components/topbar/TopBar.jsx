@@ -11,18 +11,24 @@ export default function TopBar() {
     <div className="topCenter">
         <ul className="topList">
          <li className="topListItem"> 
-           <Link className="link" to="/">HOME</Link>
+           <Link className="link" to="/home">HOME</Link>
            </li>
          <li className="topListItem">
-         <Link className="link" to="/">ABOUT</Link>
+         <Link className="link" to="/sidebar">ABOUT</Link>
          </li>
          <li className="topListItem">
-         <Link className="link" to="/">CONTACT</Link>
+         <Link className="link" to="/sidebar">CONTACT</Link>
          </li>
          <li className="topListItem">
-         <Link className="link" to="/">WRITE</Link>
+         <Link className="link" to="/write">WRITE</Link>
          </li>
-         {user && <li className="topListItem">LOGOUT</li>}
+         <li className="topListItem">
+         <Link className="link" to="/login">LOGIN</Link>
+         </li>
+
+         <li className="topListItem">
+         <Link className="link" to="/register">REGISTER</Link>
+         </li>
         </ul>
       </div>
       <div className="topRight">
