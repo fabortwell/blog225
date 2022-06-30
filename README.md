@@ -1,4 +1,4 @@
-# Tech-Convo
+# Techy-Convo
 
 Techconvo is an web app for creating, posting, and reviewing blogs
 
