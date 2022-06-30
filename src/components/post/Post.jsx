@@ -27,13 +27,19 @@ export default function Post() {
           <div className="postCats">
         <div className key={post.id} >
           <p className="postTitle">{post.title}</p>
+          <div className="singlePostEdit">
+             <i className="singlePostIcon fa-solid fa-pen-to-square"></i>
+             <i className="singlePostIcon fa-solid fa-trash-can"></i>
+             </div>
           <p className="postCat">{post.category}</p>
           <p className="postDesc">{post.content}</p>
+          <p className="singlePostEdit">{post.edit}</p>
           <p className="postDate">{post.date}</p>
-          <img 
+         
+    <img 
     className="postImg"
     src="https://images.pexels.com/photos/6685428/pexels-photo-6685428.jpeg?cs=srgb&dl=pexels-syed-qaarif-andrabi-6685428.jpg&fm=jpg" alt=""/>
-         
+       
         </div>
         </div>
         </div>

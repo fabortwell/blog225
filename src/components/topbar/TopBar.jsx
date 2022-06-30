@@ -6,7 +6,9 @@ export default function TopBar() {
   return (
     <div className="top">
     <div className="topLeft">
-      Techy-Convo 
+    <li className="topListItem"> 
+            TECH-CONVO
+           </li>
     </div>
     <div className="topCenter">
         <ul className="topList">
@@ -21,6 +23,9 @@ export default function TopBar() {
          </li>
          <li className="topListItem">
          <Link className="link" to="/write">WRITE</Link>
+         </li>
+         <li className="topListItem">
+         <Link className="link" to="/single">PUBLISHED</Link>
          </li>
          <li className="topListItem">
          <Link className="link" to="/login">LOGIN</Link>

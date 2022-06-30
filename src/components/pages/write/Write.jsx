@@ -1,32 +1,35 @@
-import "./write.css"
+
 import {Link} from "react-router-dom";
 import React, { useState } from "react";
+import "./write.css"
 
 
-function Write({currentUser, onAddPost}) {
-  const [body, setBody] = useState("");
-  function handleSubmit(e) {
-    e.preventDefault();
+  function Write(){
+     const [title, setTitle] = useState("")
+     const [category, setCategory] = useState("")
+    const [content, setContent] = useState("");
 
-    fetch("http://localhost:9292/posts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        username: currentUser.username,
-        body: body,
-      }),
-    })
-      .then((r) => r.json())
-      .then((newPost) => {
-        onAddPost(newPost);
-        setBody("");
-      });
-  }
-
-
-
+    function handleSubmit(e) {
+      e.preventDefault();
+  
+      fetch("http://localhost:9292/posts", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          category: category,
+          title: title,
+          content: content,
+        }),
+      })
+        .then((r) => r.json())
+        .then((newContent) => {
+          setContent("");
+        });
+        console.log(content);
+        console.log(category);
+    }
   return (
     <div className="write">
         <img 
@@ -37,16 +40,30 @@ function Write({currentUser, onAddPost}) {
        <form className="writeForm" onSubmit={handleSubmit}>
            <div className="writeFormGroup">
                <label htmlFor="fileInput">
-               <i className="writeIcon fa-solid fa-file-circle-plus"></i>
+               <i className="writeIcon fa-solid fa-circle-plus"></i>
                </label>
-                <input type="file"  value={body}
-                onChange={(e) => setBody(e.target.value)} name="body"  autoComplete="off" id="fileInput" style={{display:"none"}}/>
-                <input type="text" placeholder="Title" className="writeInput" autoFocus={true}/>
+                <input type="file"  onChange={(e) => setTitle(e.target.value)} style={{display:"none"}}/>
+                <input 
+                type="text" 
+                onChange={(e) => setTitle(e.target.value)}
+                 placeholder="Title" className="writeInput" autoFocus={true}/>
            </div>
+
+             <div className="writeForm">
+           <label onChange={(e) => setCategory(e.target.value)} for="blog-names">Choose a Category:</label>
+                  <select name="technology" id="technology">
+                  <option   onChange={(e) => setCategory(e.target.value)} value="technology">Technology</option>
+                  <option value="Education">Eduction</option>
+                  <option value="fashion">Fashion</option>
+                  <option value="Security">Security</option>
+                  </select>
+                </div>
+
            <div className="writeFormGroup">
-               <textarea 
+               <textarea  onChange={(e) => setContent(e.target.value)}
                placeholder="Tell your story..." 
-               type="text" className="writeInput writeText">
+               type="text" value={content}
+               className="writeInput writeText">
                </textarea>
            </div>
            <button className="writeSubmit">Publish</button>
@@ -58,3 +75,4 @@ function Write({currentUser, onAddPost}) {
 }
 
 export default Write
+

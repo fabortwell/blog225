@@ -54,6 +54,7 @@
     font-size: 18px;
     font-weight: 300;
     cursor: pointer; 
+    list-style: none;
 }
   
 .topSearchIcon{
@@ -61,4 +62,8 @@
       color: #666;
       cursor: pointer;
       margin-left: 15px;
+}
+
+
+@media screen and (max-width:940px) {
 }

@@ -1,6 +1,7 @@
 
 import "./singlePost.css"
 
+
 const SinglePost = () => {
   return (
     <div className="singlePost">
