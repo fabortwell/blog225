@@ -47,5 +47,5 @@ Reviewwing and deleting a post is currently not working
 
 ### Deployment
 
-Live link to the site is here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Live link to the site is here: https://techy-convo-blog-c1jqk0x3x-fabortwell.vercel.app
 
