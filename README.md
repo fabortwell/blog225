@@ -22,7 +22,7 @@ Node
 ### Setup Instructions and Installation
 
 Clone this repository to a location in your file system. 
-git clone https://github.com/fabortwell/Tutor-Pal
+git clone https://github.com/fabortwell/Techy-Convo.git
 Open terminal command line then navigate to the root folder of the application. cd Techy-Convo
 Ru npm install to install required depencies
 
