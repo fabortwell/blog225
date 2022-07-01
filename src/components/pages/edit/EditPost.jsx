@@ -11,7 +11,7 @@ function EditPost({ id, content, onUpdatePost }) {
       headers: {
         "Content-Type": "application/json",                                                      
       },     
-      body: JSON.stringify({
+      body: JSON.object({
         content: postContent,
       }),
     })
@@ -20,7 +20,7 @@ function EditPost({ id, content, onUpdatePost }) {
   }
 
   return (
-    <form className="edit-message" onSubmit={handleFormSubmit}>
+    <form className="singlePostEdit" onSubmit={handleFormSubmit}>
       <input
         type="text"
         name="content"
@@ -28,8 +28,10 @@ function EditPost({ id, content, onUpdatePost }) {
         value={postContent}
         onChange={(e) => setPostContent(e.target.value)}
       />
-      <input type="submit" value="Save" />
+      <input onSubmit={handleSubmit} type="submit" value="Save" />
+      <button className="writeSubmit">Send</button>
     </form>
+
   );
 }
 

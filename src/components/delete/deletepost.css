@@ -1,0 +1,9 @@
+.singlePostEdit{
+    float: right;
+    font-size: 16px;
+}
+
+.singlePostIcon{
+    margin-left: 10px;
+    cursor: pointer;
+}

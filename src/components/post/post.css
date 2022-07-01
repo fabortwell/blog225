@@ -29,6 +29,16 @@
     margin: 15px;
     margin-right: 10px;
     cursor: pointer;
+    display: block;
+}
+
+.singlePostAuthor{
+    font-family: 'Varela Round', sans-serif;
+    font-size: 11px;
+    color: #be9656;
+    line-height: 20px;
+    margin: 15px;
+    margin-right: 10px;
 }
 
 .postTitle{
@@ -58,5 +68,7 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-
 }
+
+
+

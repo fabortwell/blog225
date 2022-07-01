@@ -1,8 +1,6 @@
 
 import Sidebar from "../../sidebar/Sidebar"
 import SinglePost from "../../singlePost/SinglePost"
-
-
 import "./single.css"
 
 const Single = () => {

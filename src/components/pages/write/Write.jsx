@@ -6,13 +6,14 @@ import "./write.css"
 
   function Write(){
      const [title, setTitle] = useState("")
+     const [image, setImage] = useState("")
      const [category, setCategory] = useState("")
     const [content, setContent] = useState("");
 
     function handleSubmit(e) {
       e.preventDefault();
   
-      fetch("http://localhost:9292/posts", {
+      fetch("https://blog-app-techy.herokuapp.com/posts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -28,6 +29,7 @@ import "./write.css"
           setContent("");
         });
         console.log(content);
+        console.log(image);
         console.log(category);
     }
   return (
@@ -40,7 +42,7 @@ import "./write.css"
        <form className="writeForm" onSubmit={handleSubmit}>
            <div className="writeFormGroup">
                <label htmlFor="fileInput">
-               <i className="writeIcon fa-solid fa-circle-plus"></i>
+               <i  onChange={(e) => setImage(e.target.value)} className="writeIcon fa-solid fa-circle-plus"></i>
                </label>
                 <input type="file"  onChange={(e) => setTitle(e.target.value)} style={{display:"none"}}/>
                 <input 
@@ -50,9 +52,9 @@ import "./write.css"
            </div>
 
              <div className="writeForm">
-           <label onChange={(e) => setCategory(e.target.value)} for="blog-names">Choose a Category:</label>
-                  <select name="technology" id="technology">
-                  <option   onChange={(e) => setCategory(e.target.value)} value="technology">Technology</option>
+           <label onChange={(e) => setCategory(e.target.value)} className="blog-names">Choose a Category:</label>
+                  <select onChange={(e) => setCategory(e.target.value)} name="technology" id="technology">
+                  <option value="technology">Technology</option>
                   <option value="Education">Eduction</option>
                   <option value="fashion">Fashion</option>
                   <option value="Security">Security</option>
@@ -60,7 +62,7 @@ import "./write.css"
                 </div>
 
            <div className="writeFormGroup">
-               <textarea  onChange={(e) => setContent(e.target.value)}
+               <textarea onChange={(e) => setContent(e.target.value)}
                placeholder="Tell your story..." 
                type="text" value={content}
                className="writeInput writeText">
