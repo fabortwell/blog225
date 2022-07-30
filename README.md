@@ -46,7 +46,6 @@ Create a Pull Request
 Reviewwing and deleting a post is currently not working 
 
 ### Backend Github Link
-https://github.com/fabortwell/phase-3-sinatra-react-project.git
 
 ### Deployment
 
