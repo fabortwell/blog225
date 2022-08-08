@@ -12,7 +12,6 @@ body {
   height: 500px;
   position: relative;
   font-family: 'Droid Serif', serif;
-  display: flex-start;
   color:#fff;
   right: 0;  
   left: 0;
