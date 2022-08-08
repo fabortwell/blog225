@@ -18,7 +18,7 @@ function App() {
   
   return (
     <Router>
-      <TopBar/>
+     <Home />
       <Routes>
        <Route path="/home" element={<Home />} />
        <Route path="/write" element={<Write />} />
