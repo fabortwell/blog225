@@ -32,7 +32,7 @@ function Login({ onLogin}) {
 				<div className="login__field">
 					<i className="login__icon fas fa-user"></i>
 					<input type="text" 
-					class="login__input" 
+					className="login__input" 
 					id="username"
 					autoComplete="off"
 					value={name}
@@ -58,9 +58,9 @@ function Login({ onLogin}) {
 			<div className="social-login">
 				<h3>log in via</h3>
 				<div className="social-icons">
-					<a href="/" className="social-login__icon fab fa-instagram"></a>
-					<a href="/" className="social-login__icon fab fa-facebook"></a>
-					<a href="/" className="social-login__icon fab fa-twitter"></a>
+					<a href="/home" className="social-login__icon fab fa-instagram"></a>
+					<a href="/home" className="social-login__icon fab fa-facebook"></a>
+					<a href="/home" className="social-login__icon fab fa-twitter"></a>
 				</div>
 			</div>
 		</div>
