@@ -5,7 +5,7 @@
      <div className="sidebar">
      <div className="sidebarItem">
        <span className="sidebarTitle">ABOUT US</span>
-       <img src="https://themegoods-cdn-pzbycso8wng.stackpathdns.com/grandblog/demo/wp-content/uploads/2015/11/aboutme.jpg" alt=""/>
+       <img src="https://images.pexels.com/photos/2246476/pexels-photo-2246476.jpeg?auto=compress&crop=&cs=tinysrgb&dpr=2&fit=crop&h=350&w=250" alt=""/>
        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero similique cupiditate soluta, deserunt cumque aliquam animi at? Voluptatibus quasi quisquam neque ex cum eos perferendis quos repellat velit, sint atque!</p>
      </div>
      <div className="sidebarItem">

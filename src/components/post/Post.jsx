@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./post.css"
-import { FaStar } from "react-icons/fa";
-import { Container, Radio, Rating } from "./RatingStyles";
+
 
 
 
@@ -10,7 +9,7 @@ export default function Post() {
 
   const [posts, setPosts] = useState([]);
  useEffect(() => {
-  fetch("https://blog-app-techy.herokuapp.com/posts")
+  fetch("/posts")
   .then((r) => r.json())
   .then((data) => setPosts(data));
  }, [])
@@ -23,63 +22,58 @@ export default function Post() {
 
     {posts.map((post) => {
       return (
-        <div className="postInfo">
-          <div className="postCats">
-        <div className key={post.id} >
-          <p className="postTitle">{post.title}</p>
-          <div className="singlePostEdit">
-             <i className="singlePostIcon fa-solid fa-pen-to-square"></i>
-             <i className="singlePostIcon fa-solid fa-trash-can"></i>
-             </div>
-             <span> Author: 
-          <p className="singlePostAuthor">{post.author}</p>
-          </span>
-             <span> Category: 
-          <p className="postCat">{post.category}</p>
-          </span>
-          <p className="postDesc">{post.content}</p>
-          <p className="singlePostEdit">{post.edit}</p>
-          <p className="singlePostDate">{post.date}</p>
-  <Container>
-      {[...Array(5)].map((item, index) => {
-        const givenRating = index + 1;
-        return (
-  
-          <label>
-            <Radio
-              type="radio"
-              value={givenRating}
-              onClick={() => {
-                setRate(givenRating);
-                alert(`Are you sure you want to give ${givenRating} stars ?`);
-              }}
-            />
-            <Rating>
-              <FaStar
-                color={
-                  givenRating < rate || givenRating === rate
-                    ? "rgb(255, 99, 71)"
-                    : "rgb(192,192,192)"
-                }
-              />
-            </Rating>
-          </label>
-        );
-      })}
-    </Container>
-    
-         
-    <img 
-    className="postImg"
-    src={post.image_url} alt=""/>
-       
-        </div>
-        </div>
-        </div>
-        
+                <div className="blog-card spring-fever">
+                <div className="title-content">
+                  <h3><a href="/">{post.category}</a></h3>
+                  <div className="intro"> <a href="/">{post.title}</a> </div>
+                </div>
+                <div className="card-info">
+                  {post.content}
+                  <a href="/">Read Article<span class="licon icon-arr icon-black"></span></a>
+                </div>
+                <div className="utility-info">
+                  <ul className="utility-list">
+                    <li><span className="licon icon-dat"></span>{post.updated_at}</li>
+                    <li><span className="licon icon-tag"></span><a href="/">{post.category}</a></li>
+                  </ul>
+                </div>
+                <div class="gradient-overlay"></div>
+                <div class="color-overlay"></div>
+              </div>   
       )
     })}
 
 </div>
   )
 }
+
+
+
+
+
+
+//  return (
+//       {posts.map((post) => {
+//       <div className="blog-card spring-fever">
+//       <div className="title-content">
+//         <h3><a href="/">{Post.title}</a></h3>
+//         <div className="intro"> <a href="/">Inspiration</a> </div>
+//       </div>
+//       <div className="card-info">
+//         {Post.content}
+//         <a href="/">Read Article<span class="licon icon-arr icon-black"></span></a>
+//       </div>
+//       <div className="utility-info">
+//         <ul className="utility-list">
+//           <li><span className="licon icon-like"></span><a href="/">2</a></li>
+//           <li><span className="licon icon-com"></span><a href="/">12</a></li>
+//           <li><span className="licon icon-dat"></span>{Post.updated_at}</li>
+//           <li><span className="licon icon-tag"></span><a href="/">Photos</a>, <a href="/">Nice</a></li>
+//         </ul>
+//       </div>
+//       <div class="gradient-overlay"></div>
+//       <div class="color-overlay"></div>
+//     </div>
+//   )
+// }
+// export default Post
